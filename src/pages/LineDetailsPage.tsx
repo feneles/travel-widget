@@ -9,15 +9,15 @@ import {
   Divider,
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { useLineStatus } from "../hooks/useLineStatus";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
 import { lineColors } from "../utils/colors";
+import { useLineStore } from "../store/lineStore";
 
 const LineDetailsPage = () => {
   const { lineId } = useParams<{ lineId: string }>();
   const navigate = useNavigate();
-  const { lines, loading, error, lastUpdated } = useLineStatus();
+  const { lines, loading, error, lastUpdated } = useLineStore();
 
   if (loading) {
     return <LoadingSpinner />;

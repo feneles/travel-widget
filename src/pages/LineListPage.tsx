@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import { useLineStatus } from "../hooks/useLineStatus";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
 import LineStatusTable from "../components/LineStatusTable";
+import { useLineStore } from "../store/lineStore";
 
 const LineListPage = () => {
-  const { lines, loading, error, lastUpdated } = useLineStatus();
+  const { lines, loading, error, lastUpdated } = useLineStore();
 
   const renderContent = () => {
     if (loading) {
