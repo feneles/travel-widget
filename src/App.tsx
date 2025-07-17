@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { AppRouter } from "./router/AppRouter";
@@ -18,11 +18,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
+      <Router>
         <Container maxWidth="md" className="py-8">
           <AppRouter />
         </Container>
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
   );
 }

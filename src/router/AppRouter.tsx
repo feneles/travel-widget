@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import LineListPage from "../pages/LineListPage";
 import LineDetailsPage from "../pages/LineDetailsPage";
-import NotFoundPage from "../pages/NotFoundPage"; // Import the new component
+import NotFoundPage from "../pages/NotFoundPage";
 
 export const AppRouter = () => {
   return (
